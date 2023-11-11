@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+@keyframes enter {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes enterinput {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    font-size: 120%;
+    background-color: #060606;
+    color: white;
+    font-family: 'Space Mono', sans-serif;
+}
+
+.question {
+    font-size: 3.5rem;
+    animation: enter 2s ease 0s 1 normal forwards;
+}
+
+input,
+input:before {
+    color: white;
+    animation: enterinput 2s ease 0s 1 normal forwards;
+    background-color: transparent;
+    font-family: 'Space Mono', sans-serif;
+    margin-top: 60px;
+    font-size: 120%;
+    transition: ease all 0.3s;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.235);
+}
+
+input:focus {
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.description {
+    color: rgba(255, 255, 255, 0.56);
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.719);
+}
+
+button,
+button:before {
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.281);
+    color: white;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border-radius: 3px;
+    transition: ease all 0.6s;
+    margin-top: 50px;
+}
+
+button:hover {
+    transform: translate3d(0, -10px, 10px);
+    background-color: rgba(255, 255, 255, 0.56);
+    cursor: pointer;
+}
+
+#popup {
+    animation: enter 2s ease 0s 1 normal forwards;
+    float: right;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.444);
+    padding-bottom: 25px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+#popup>h1 {
+    color: rgb(255, 102, 102);
+}
+#pagetwo {
+    display:none;
+}
